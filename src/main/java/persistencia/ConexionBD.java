@@ -27,12 +27,12 @@ public class ConexionBD {
 
     public ConexionBD() {
         host = "localhost:3306"; //BD local
-        db = "baseDatosS22";
+        db = "consultorio";
         url = "jdbc:mysql://" + host + "/" + db;
         username = "root";
-        password = "";
+        password = "admin22";
         
-        DB_driver = "com.mysql.jdbc.Driver";
+        DB_driver = "com.mysql.cj.jdbc.Driver";
         //Siempreo que se realice algo en la BD se hace en un bloque try/catch
         try {
             Class.forName(DB_driver); //Se asigna el driver
@@ -43,6 +43,7 @@ public class ConexionBD {
         
         //Conectar a la BD
         try {
+            System.out.println("URL: "+url);
             conexion = DriverManager.getConnection(url,username,password); 
             System.out.println("Conexion exitosa");
                   
@@ -148,7 +149,7 @@ public class ConexionBD {
             conexion.rollback();
             return true;
         } catch (SQLException | RuntimeException ex) {
-            System.out.println("Error en commit a la BD");
+            System.out.println("Error en rollback a la BD");
            return false;
         }
 }
