@@ -97,8 +97,8 @@ public class Medicos {
     //metodos para el CRUD de Medicos
     public boolean guardarContacto() {
         ConexionBD conexion = new ConexionBD();
-        String sentencia = "INSERT INTO medicos(id_medico, nombre, apellido, identificacion, tipoIdentificacion, usuario, num_celular, email)"
-                + " VALUES ( '" + this.id_medico + "','" + this.nombre + "',"
+        String sentencia = "INSERT INTO medicos(nombre, apellido, identificacion, tipoIdentificacion, usuario, num_celular, email)"
+                + " VALUES ( '" + this.nombre + "',"
                 + "'" + this.apellido + "','" + this.identificacion + "','" + this.tipoIdentificacion + "',"
                 + "'" + this.usuario + "','" + this.num_celular + "','" + this.email + "');  ";
 
@@ -144,7 +144,7 @@ public class Medicos {
 
     public boolean actualizarContacto() {
         ConexionBD conexion = new ConexionBD();
-        String sentencia = "UPDATE `medicos` SET id_medico ='" + this.id_medico +"nombre='" + this.nombre + "',apellido='" + this.apellido + "',identificacion='" + this.identificacion
+        String sentencia = "UPDATE `medicos` SET nombre ='" + this.nombre + "',apellido='" + this.apellido + "',identificacion='" + this.identificacion
                 + "',tipoIdentificacion='" + this.tipoIdentificacion + "',usuario='" + this.usuario + "',num_celular='" + this.num_celular + "',email='" + this.email
                 +  "' WHERE id_medico=" + this.id_medico + ";";
         if(conexion.setAutoCommitBD(false)){
