@@ -20,7 +20,7 @@ switch(proceso){
         
         //id_medico nombre apellido identificacion usuario num_celular email tipoIdentificacion 
         System.out.println("Guardar Contacto");
-        c.setId_Medico(Integer.parseInt(request.getParameter("id_medico"))); //a este hay que convertirlo de entero a string
+        //c.setId_Medico(Integer.parseInt(request.getParameter("id_medico"))); //a este hay que convertirlo de entero a string
         c.setNombre(request.getParameter("nombre"));
         c.setApellido(request.getParameter("apellido"));
         c.setIdentificacion(request.getParameter("identificacion"));
