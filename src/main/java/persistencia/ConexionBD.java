@@ -27,10 +27,10 @@ public class ConexionBD {
 
     public ConexionBD() {
         host = "localhost:3306"; //BD local
-        db = "consultorio";
+        db = "c3s22grupo1";
         url = "jdbc:mysql://" + host + "/" + db;
-        username = "root";
-        password = "admin22";
+        username = "c3s22grupo1";
+        password = "TflDP8St";
         
         DB_driver = "com.mysql.cj.jdbc.Driver";
         //Siempreo que se realice algo en la BD se hace en un bloque try/catch
