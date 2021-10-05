@@ -13,7 +13,7 @@
         <!Bootstrap>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous"/>
         <!Bootstrap>
-        <script src = "http://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
+        <script src = "https://ajax.googleapis.com/ajax/libs/angularjs/1.2.15/angular.min.js"></script>
 
     </head>
 <body>
@@ -118,7 +118,7 @@
 <!--<script src="ControladorMedicos.js"></script>-->
 <script>
 
-    var app = angular.module('Prueba', []);
+    var app = angular.module('prueba', []);
     app.controller('primerController', function ($scope, $http) {
         $scope.guardarContacto = function () {
             let regexNumbers = /^[0-9]*$/; // Expresion regular para solo números
