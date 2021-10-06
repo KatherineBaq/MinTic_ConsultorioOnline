@@ -5,7 +5,7 @@
  */
 
 
-var app = angular.module('Prueba', []);
+var app = angular.module('prueba', []);
 app.controller('primerController', function ($scope, $http) {
     $scope.guardarContacto = function () {
         let regexNumbers = /^[0-9]*$/; // Expresion regular para solo números
